@@ -1,0 +1,134 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Poppins", sans-serif;
+}
+
+body{
+  background:#c31767;
+  color:#fff;
+  scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+.navbar{
+  width:100%;
+  position:fixed;
+  top:0; left:0;
+  padding:15px 50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  transition:0.3s;
+  z-index:999;
+}
+.navbar.scrolled{
+  background:#ba11cd;
+}
+.nav-links{
+  list-style:none;
+  display:flex;
+}
+.nav-links li{
+  margin-left:25px;
+}
+.nav-links li a{
+  color:white;
+  text-decoration:none;
+  font-size:18px;
+  transition:0.3s;
+}
+.nav-links li a:hover{
+  color:palevioletred;
+}
+
+.menu-btn{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+  color:white;
+}
+
+/* HERO SECTION */
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+.hero button{
+  margin-top:20px;
+  padding:12px 25px;
+  background:palevioletred;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+/* SERVICES */
+.services{
+  padding:80px 10%;
+  text-align:center;
+}
+.service-container{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+.service-box{
+  width:30%;
+  background:purple;
+  padding:25px;
+  margin-top:20px;
+  border-radius:8px;
+  transition:0.3s;
+}
+.service-box:hover{
+  transform:translateY(-8px);
+}
+
+/* ABOUT */
+.about{
+  padding:80px 12%;
+  text-align:center;
+  line-height:1.7;
+}
+
+/* CONTACT */
+.contact{
+  padding:70px 12%;
+  text-align:center;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:plum;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-links{
+    position:absolute;
+    top:60px;
+    right:0;
+    width:200px;
+    background:pink;
+    flex-direction:column;
+    display:none;
+    text-align:center;
+  }
+  .nav-links.show{
+    display:block;
+  }
+  .service-box{
+    width:100%;
+  }
+  .menu-btn{
+    display:block;
+  }
+}
